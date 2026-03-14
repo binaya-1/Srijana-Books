@@ -4,207 +4,256 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srijana Books & Stationery | Chabahil, Kathmandu</title>
+    <meta name="description" content="Books, stationery, art supplies, Loksewa prep books, Japanese N4/N5 books, printing and photocopy services. Located beside Charumati Stupa, Chabahil, Kathmandu.">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS Variables & Theme */
         :root {
-            --forest-green: #2d5a27;
-            --sage-green: #7a9e76;
-            --cream: #faf6ee;
-            --warm-white: #ffffff;
-            --dark-brown: #2c1f0e;
-            --soft-green-bg: #eef3ec;
-            --transition: all 0.3s ease;
+            --crimson:    #8B1A1A;
+            --gold:       #C9922A;
+            --gold-light: #E8C060;
+            --cream:      #FAF3E0;
+            --parchment:  #F0E6C8;
+            --deep:       #1A0F00;
+            --forest:     #2C4A2E;
+            --sage:       #6B8F6E;
+            --rust:       #A0522D;
+            --off-white:  #FFFDF5;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Base & Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px; /* Offset for sticky nav */
-        }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
         body {
             font-family: 'Hind', sans-serif;
             background-color: var(--cream);
-            color: var(--dark-brown);
-            line-height: 1.6;
+            color: var(--deep);
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6, .brand-logo {
-            font-family: 'Playfair Display', serif;
-            color: var(--forest-green);
+        /* Decorative SVG mandala background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9922A' fill-opacity='0.04'%3E%3Cpath d='M40 40m-2 0a2 2 0 1 1 4 0a2 2 0 1 1 -4 0M40 20m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0M40 60m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0M20 40m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0M60 40m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0M27 27m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0M53 27m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0M27 53m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0M53 53m-1 0a1 1 0 1 1 2 0a1 1 0 1 1 -2 0'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        * { position: relative; z-index: 1; }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--crimson);
+            line-height: 1.2;
         }
 
-        ul {
-            list-style: none;
+        .nepali-heading {
+            font-family: 'Tiro Devanagari Sanskrit', serif;
         }
 
-        /* Container */
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Typography */
-        h1 { font-size: 3rem; margin-bottom: 0.5rem; line-height: 1.2; }
-        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
-        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        p { margin-bottom: 1rem; font-size: 1.1rem; }
+        section { padding: 90px 0; }
+
+        /* Gold divider ornament */
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 0 auto 40px;
+        }
+        .ornament::before,
+        .ornament::after {
+            content: '';
+            flex: 1;
+            max-width: 120px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold));
+        }
+        .ornament::after {
+            background: linear-gradient(to left, transparent, var(--gold));
+        }
+        .ornament-diamond {
+            width: 10px; height: 10px;
+            background: var(--gold);
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 8px;
+            letter-spacing: 0.02em;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
 
         /* Buttons */
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            border-radius: 30px;
+            padding: 13px 30px;
+            border-radius: 2px;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             text-align: center;
-            border: 2px solid transparent;
+            letter-spacing: 0.05em;
+            font-size: 0.95rem;
+            text-transform: uppercase;
         }
-
         .btn-primary {
-            background-color: var(--forest-green);
-            color: var(--warm-white);
+            background: var(--crimson);
+            color: var(--cream);
+            border: 1px solid var(--crimson);
+            box-shadow: 3px 3px 0 var(--gold);
         }
-
         .btn-primary:hover {
-            background-color: var(--sage-green);
-            transform: translateY(-2px);
-            color: var(--warm-white);
+            background: var(--deep);
+            box-shadow: 5px 5px 0 var(--gold);
+            transform: translate(-2px, -2px);
         }
-
         .btn-outline {
-            background-color: transparent;
-            border-color: var(--forest-green);
-            color: var(--forest-green);
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            box-shadow: 3px 3px 0 var(--crimson);
         }
-
         .btn-outline:hover {
-            background-color: var(--forest-green);
-            color: var(--warm-white);
-            transform: translateY(-2px);
+            background: var(--gold);
+            color: var(--deep);
+            box-shadow: 5px 5px 0 var(--crimson);
+            transform: translate(-2px, -2px);
         }
-
         .btn-wa {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background-color: #25D366;
+            background: #25D366;
             color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 500;
+            padding: 10px 22px;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            border: 1px solid #25D366;
+            box-shadow: 3px 3px 0 rgba(37,211,102,0.3);
+            transition: var(--transition);
         }
-
         .btn-wa:hover {
-            background-color: #1ebe57;
+            background: #1ebe57;
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 rgba(37,211,102,0.3);
             color: white;
-            transform: translateY(-2px);
         }
 
-        /* Section Spacing */
-        section {
-            padding: 80px 0;
-        }
-
-        /* Sticky Navbar */
+        /* ── NAVBAR ── */
         .navbar {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 20px 0;
+            padding: 18px 0;
             transition: var(--transition);
-            background-color: var(--cream);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: rgba(250, 243, 224, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(201,146,42,0.2);
         }
-
         .navbar.scrolled {
-            background-color: var(--forest-green);
-            padding: 15px 0;
+            background: var(--deep);
+            padding: 12px 0;
+            border-bottom: 2px solid var(--gold);
         }
-
         .navbar.scrolled .brand-logo,
-        .navbar.scrolled .nav-link {
-            color: var(--warm-white);
-        }
+        .navbar.scrolled .nav-link { color: var(--cream); }
+        .navbar.scrolled .nav-link:hover { color: var(--gold-light); }
+        .navbar.scrolled .brand-tagline { color: var(--gold); }
 
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        .brand-wrap { display: flex; flex-direction: column; }
         .brand-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            z-index: 1001;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--crimson);
+            line-height: 1;
+            letter-spacing: 0.02em;
         }
-
+        .brand-tagline {
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+            font-size: 0.75rem;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+        }
         .nav-menu {
             display: flex;
-            gap: 30px;
+            gap: 32px;
             align-items: center;
         }
-
         .nav-link {
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--deep);
             transition: var(--transition);
-            color: var(--dark-brown);
+            position: relative;
         }
-
-        .nav-link:hover {
-            color: var(--sage-green);
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -3px; left: 0;
+            width: 0; height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
         }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: var(--crimson); }
 
-        .navbar.scrolled .nav-link:hover {
-            color: var(--sage-green);
-        }
-
-        /* Mobile Menu */
         .hamburger {
             display: none;
             cursor: pointer;
             z-index: 1001;
             background: none;
             border: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 4px;
         }
-
         .hamburger-line {
-            width: 25px;
-            height: 3px;
-            background-color: var(--forest-green);
-            margin: 5px 0;
+            width: 24px; height: 2px;
+            background: var(--crimson);
             transition: var(--transition);
         }
+        .navbar.scrolled .hamburger-line { background: var(--cream); }
 
-        .navbar.scrolled .hamburger-line {
-            background-color: var(--warm-white);
-        }
-
-        /* Hero Section */
+        /* ── HERO ── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -213,45 +262,75 @@
             text-align: center;
             padding-top: 80px;
             background-color: var(--cream);
-            background-image: radial-gradient(var(--sage-green) 1px, transparent 1px);
-            background-size: 30px 30px;
-            position: relative;
+            overflow: hidden;
         }
 
-        .hero::before {
+        /* Decorative corner motifs */
+        .hero::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at center, rgba(250,246,238,0.7) 0%, var(--cream) 100%);
-            z-index: 0;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 10% 10%, rgba(139,26,26,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 90%, rgba(201,146,42,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 10%, rgba(44,74,46,0.05) 0%, transparent 40%);
+            pointer-events: none;
         }
 
+        /* Mandala SVG decoration */
+        .mandala-bg {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px; height: 700px;
+            opacity: 0.04;
+            pointer-events: none;
+            animation: slowspin 60s linear infinite;
+        }
+        @keyframes slowspin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
         .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            padding: 40px;
+            max-width: 820px;
+            padding: 60px 40px;
+        }
+
+        /* Top badge */
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            margin-bottom: 28px;
+            font-family: 'Hind', sans-serif;
         }
 
         .hero h1 {
-            font-size: 4rem;
-            color: var(--forest-green);
-            margin-bottom: 10px;
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+            font-size: 4.5rem;
+            color: var(--crimson);
+            margin-bottom: 12px;
+            line-height: 1.15;
+            text-shadow: 2px 2px 0 rgba(201,146,42,0.15);
         }
-
-        .hero .subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--sage-green);
+        .hero-en-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--deep);
+            font-style: italic;
             margin-bottom: 20px;
+            letter-spacing: 0.03em;
         }
-
-        .hero .description {
-            font-size: 1.2rem;
-            color: var(--dark-brown);
-            margin-bottom: 40px;
+        .hero-description {
+            font-size: 1rem;
+            color: var(--rust);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 48px;
+            font-weight: 500;
         }
-
         .hero-buttons {
             display: flex;
             gap: 20px;
@@ -259,626 +338,685 @@
             flex-wrap: wrap;
         }
 
-        /* Opening Hours Banner */
-        .hours-banner {
-            background-color: var(--forest-green);
-            color: var(--warm-white);
-            text-align: center;
-            padding: 15px 20px;
-            font-size: 1.1rem;
-            font-weight: 500;
+        /* Scroll indicator */
+        .scroll-hint {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            animation: bobble 2s ease-in-out infinite;
+        }
+        .scroll-hint::after {
+            content: '';
+            width: 1px; height: 40px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+        }
+        @keyframes bobble {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(6px); }
         }
 
-        /* Products Section */
-        .products {
-            background-color: var(--warm-white);
+        /* ── HOURS BANNER ── */
+        .hours-banner {
+            background: var(--deep);
+            color: var(--cream);
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            border-top: 2px solid var(--gold);
+            border-bottom: 2px solid var(--gold);
         }
+        .hours-banner span { color: var(--gold-light); font-weight: 600; }
+
+        /* ── PRODUCTS ── */
+        .products { background: var(--off-white); }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
         }
-
         .product-card {
-            background-color: var(--soft-green-bg);
-            border-radius: 16px;
-            padding: 30px 20px;
+            background: var(--cream);
+            border: 1px solid rgba(201,146,42,0.25);
+            border-top: 3px solid var(--gold);
+            padding: 32px 24px;
             text-align: center;
             transition: var(--transition);
-            border: 1px solid rgba(122, 158, 118, 0.2);
+            position: relative;
+            overflow: hidden;
         }
-
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(201,146,42,0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(45, 90, 39, 0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(139,26,26,0.1);
+            border-top-color: var(--crimson);
         }
-
         .product-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            display: block;
         }
-
         .product-title-np {
-            font-family: 'Hind', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--forest-green);
-            margin-bottom: 5px;
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+            font-size: 1.2rem;
+            color: var(--crimson);
+            margin-bottom: 4px;
         }
-
         .product-title-en {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1rem;
-            color: var(--sage-green);
+            color: var(--rust);
+            font-style: italic;
         }
 
-        /* Special Highlight Banner */
+        /* ── HIGHLIGHT BANNER ── */
         .highlight-banner {
-            background-color: var(--forest-green);
-            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px);
+            background: var(--crimson);
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(201,146,42,0.05) 30px, rgba(201,146,42,0.05) 60px);
             color: var(--cream);
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
+            position: relative;
         }
-
+        .highlight-banner::before,
+        .highlight-banner::after {
+            content: '❧';
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.15;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .highlight-banner::before { left: 40px; }
+        .highlight-banner::after  { right: 40px; transform: translateY(-50%) scaleX(-1); }
         .highlight-banner h2 {
-            color: var(--cream);
-            margin-bottom: 10px;
+            color: var(--gold-light);
+            font-size: 2.4rem;
+            margin-bottom: 12px;
         }
-
         .highlight-banner p {
-            font-size: 1.2rem;
-            max-width: 700px;
+            font-size: 1.1rem;
+            max-width: 680px;
             margin: 0 auto;
-            color: var(--soft-green-bg);
+            color: rgba(250,243,224,0.85);
         }
 
-        /* About Section */
-        .about {
-            background-color: var(--cream);
-        }
-
+        /* ── ABOUT ── */
+        .about { background: var(--parchment); }
         .about-content {
             display: flex;
             align-items: center;
-            gap: 60px;
-            margin-top: 40px;
+            gap: 64px;
+            margin-top: 20px;
         }
-
         .about-image {
-            flex: 0 0 200px;
+            flex: 0 0 220px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
-
         .placeholder-img {
-            width: 200px;
-            height: 200px;
+            width: 200px; height: 200px;
             border-radius: 50%;
-            background-color: var(--sage-green);
-            border: 3px dashed var(--forest-green);
+            background: var(--cream);
+            border: 2px solid var(--gold);
+            outline: 6px solid rgba(201,146,42,0.15);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: var(--cream);
-            font-weight: 600;
-            font-size: 1.2rem;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            font-style: italic;
             padding: 20px;
-            line-height: 1.4;
+            line-height: 1.5;
+            box-shadow: 0 0 0 12px rgba(201,146,42,0.06);
         }
-
-        .about-text {
-            flex: 1;
+        .about-text p {
+            font-size: 1.05rem;
+            color: var(--deep);
+            margin-bottom: 18px;
         }
-
-        /* Why Choose Us */
-        .features {
-            background-color: var(--warm-white);
-            padding-top: 40px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .feature-card {
-            padding: 30px 20px;
-            text-align: center;
-            background-color: var(--cream);
-            border-radius: 12px;
-            transition: var(--transition);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .feature-card p {
-            font-size: 0.95rem;
-            color: var(--sage-green);
+        .about-text p:last-child {
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+            color: var(--crimson);
+            font-size: 1.1rem;
+            border-left: 3px solid var(--gold);
+            padding-left: 16px;
             margin-bottom: 0;
         }
 
-        /* Contact Section */
-        .contact {
-            background-color: var(--cream);
+        /* ── FEATURES ── */
+        .features { background: var(--off-white); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2px;
+            border: 1px solid rgba(201,146,42,0.2);
+        }
+        .feature-card {
+            padding: 40px 24px;
+            text-align: center;
+            background: var(--cream);
+            transition: var(--transition);
+            border: 1px solid rgba(201,146,42,0.15);
+        }
+        .feature-card:hover {
+            background: var(--crimson);
+        }
+        .feature-card:hover h4,
+        .feature-card:hover p { color: var(--cream); }
+        .feature-card:hover .feature-icon { filter: grayscale(0) brightness(1.5); }
+        .feature-icon {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+            display: block;
+            transition: var(--transition);
+        }
+        .feature-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            color: var(--crimson);
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--rust);
+            margin-bottom: 0;
+            transition: var(--transition);
         }
 
+        /* ── CONTACT ── */
+        .contact { background: var(--parchment); }
         .contact-container {
             display: flex;
-            gap: 50px;
-            margin-top: 40px;
+            gap: 48px;
+            margin-top: 20px;
         }
-
         .contact-details {
             flex: 1;
-            background-color: var(--warm-white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            background: var(--cream);
+            padding: 48px 40px;
+            border: 1px solid rgba(201,146,42,0.3);
+            border-top: 4px solid var(--crimson);
+            position: relative;
         }
-
+        .contact-details::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; right: -5px;
+            width: 100%; height: 100%;
+            border: 1px solid rgba(201,146,42,0.2);
+            pointer-events: none;
+        }
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-size: 1.05rem;
         }
-
-        .contact-item .icon {
-            font-size: 1.5rem;
-        }
-
-        .map-container {
-            flex: 1;
-            border-radius: 16px;
-            overflow: hidden;
-            min-height: 350px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+        .contact-item .icon { font-size: 1.4rem; flex-shrink: 0; }
+        .contact-item a { color: var(--crimson); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
         .contact-btn {
-            margin-top: 20px;
+            margin-top: 24px;
             width: 100%;
             text-align: center;
             display: block;
         }
+        .map-container {
+            flex: 1;
+            border-radius: 0;
+            overflow: hidden;
+            min-height: 380px;
+            border: 1px solid rgba(201,146,42,0.3);
+            border-top: 4px solid var(--gold);
+        }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
 
-        /* Footer */
+        /* ── FOOTER ── */
         footer {
-            background-color: var(--forest-green);
+            background: var(--deep);
             color: var(--cream);
-            padding: 60px 0 30px;
+            padding: 70px 0 32px;
             text-align: center;
+            border-top: 4px solid var(--gold);
         }
-
         .footer-logo {
-            font-size: 2rem;
-            color: var(--cream);
-            margin-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--gold-light);
+            margin-bottom: 4px;
+            letter-spacing: 0.04em;
         }
-
+        .footer-nepali {
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
         .footer-tagline {
-            color: var(--sage-green);
-            margin-bottom: 30px;
+            color: rgba(250,243,224,0.6);
+            margin-bottom: 36px;
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1.1rem;
         }
-
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 40px;
+            margin-bottom: 48px;
             flex-wrap: wrap;
         }
-
         .footer-links a {
-            color: var(--cream);
+            color: rgba(250,243,224,0.7);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
             transition: var(--transition);
         }
-
-        .footer-links a:hover {
-            color: var(--sage-green);
+        .footer-links a:hover { color: var(--gold-light); }
+        .footer-divider {
+            width: 80px; height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 0 auto 32px;
         }
-
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
-            font-size: 0.95rem;
-            color: var(--sage-green);
+            font-size: 0.85rem;
+            color: rgba(250,243,224,0.4);
+            line-height: 2;
         }
 
-        /* Floating WhatsApp Button */
+        /* ── FLOATING WA ── */
         .floating-wa {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
+            bottom: 30px; right: 30px;
+            width: 58px; height: 58px;
+            background: #25D366;
             color: white;
-            border-radius: 50%;
+            border-radius: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 35px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
+            box-shadow: 4px 4px 0 rgba(37,211,102,0.35), 0 6px 20px rgba(37,211,102,0.3);
+            z-index: 999;
             transition: var(--transition);
         }
-
         .floating-wa:hover {
-            transform: scale(1.1);
-            background-color: #1ebe57;
+            transform: translate(-3px, -3px);
+            box-shadow: 7px 7px 0 rgba(37,211,102,0.35);
+            background: #1ebe57;
+        }
+        .floating-wa svg { width: 32px; height: 32px; fill: white; }
+
+        /* ── BACK TO TOP ── */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px; right: 30px;
+            width: 44px; height: 44px;
+            background: var(--crimson);
+            color: var(--cream);
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 3px 3px 0 var(--gold);
+            z-index: 999;
+            transition: var(--transition);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: all; }
+        .back-to-top:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 var(--gold);
         }
 
-        .floating-wa svg {
-            width: 35px;
-            height: 35px;
-            fill: currentColor;
-        }
-
-        /* Animations */
+        /* ── ANIMATIONS ── */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(28px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
         }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Mobile Responsiveness */
+        /* ── RESPONSIVE ── */
         @media (max-width: 992px) {
-            .hero h1 { font-size: 3rem; }
+            .hero h1 { font-size: 3.2rem; }
             .about-content { flex-direction: column; text-align: center; }
+            .about-text p:last-child { text-align: left; }
             .contact-container { flex-direction: column; }
             .map-container { min-height: 300px; }
         }
 
         @media (max-width: 768px) {
-            .hamburger { display: block; }
-            
+            section { padding: 60px 0; }
+
+            /* Navbar */
+            .hamburger { display: flex; }
             .nav-menu {
                 position: fixed;
-                top: 0;
-                right: -100%;
-                width: 70%;
+                top: 0; right: -100%;
+                width: 80%;
                 height: 100vh;
-                background-color: var(--warm-white);
+                background: var(--deep);
                 flex-direction: column;
                 justify-content: center;
-                padding: 50px 20px;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                padding: 60px 32px;
                 transition: 0.4s ease;
+                border-left: 2px solid var(--gold);
+                z-index: 1000;
             }
+            .nav-menu.active { right: 0; }
+            .nav-link { font-size: 1.2rem; color: var(--cream) !important; }
+            .nav-link::after { background: var(--gold); }
+            .btn-wa { display: none; }
 
-            .nav-menu.active {
-                right: 0;
-            }
+            /* Hero */
+            .hero { padding: 100px 0 60px; min-height: auto; }
+            .hero-content { padding: 20px 16px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-en-title { font-size: 1.1rem; }
+            .hero-description { font-size: 0.85rem; letter-spacing: 0.06em; }
+            .hero-badge { font-size: 0.7rem; padding: 5px 14px; }
+            .hero-buttons { flex-direction: column; align-items: center; gap: 12px; }
+            .hero-buttons .btn { width: 100%; max-width: 280px; }
+            .scroll-hint { display: none; }
 
-            .nav-link {
-                font-size: 1.5rem;
-                color: var(--forest-green);
-            }
+            /* Hours */
+            .hours-banner { font-size: 0.85rem; padding: 12px 16px; }
 
-            .navbar.scrolled .nav-link {
-                color: var(--forest-green);
-            }
-            
-            .navbar.scrolled .nav-link:hover {
-                color: var(--sage-green);
-            }
+            /* Sections */
+            .section-title { font-size: 1.9rem; }
+            .section-subtitle { font-size: 0.95rem; }
 
-            .hero h1 { font-size: 2.5rem; }
-            .hero .subtitle { font-size: 1.2rem; }
+            /* Products */
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+            .product-card { padding: 20px 14px; }
+            .product-icon { font-size: 2rem; margin-bottom: 10px; }
+            .product-title-np { font-size: 1rem; }
+            .product-title-en { font-size: 0.85rem; }
+
+            /* Highlight */
+            .highlight-banner { padding: 48px 20px; }
+            .highlight-banner h2 { font-size: 1.6rem; }
+            .highlight-banner p { font-size: 0.95rem; }
+            .highlight-banner::before,
+            .highlight-banner::after { display: none; }
+
+            /* About */
+            .about-content { gap: 32px; }
+            .placeholder-img { width: 160px; height: 160px; font-size: 0.9rem; }
+
+            /* Features */
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .feature-card { padding: 28px 16px; }
+            .feature-icon { font-size: 2rem; }
+            .feature-card h4 { font-size: 1.05rem; }
+
+            /* Contact */
+            .contact-details { padding: 28px 20px; }
+            .contact-item { font-size: 0.95rem; }
+            .map-container { min-height: 260px; }
+
+            /* Footer */
+            footer { padding: 48px 0 24px; }
+            .footer-logo { font-size: 1.6rem; }
+            .footer-links { gap: 20px; }
+
+            /* Floating buttons */
             .floating-wa { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-            .floating-wa svg { width: 30px; height: 30px; }
+            .floating-wa svg { width: 26px; height: 26px; }
+            .back-to-top { bottom: 84px; right: 20px; }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 { font-size: 1.8rem; }
+            .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .features-grid { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 1.6rem; }
+            .brand-logo { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Sticky Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="brand-logo">Srijana Books & Stationery</a>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#products" class="nav-link">Products</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li>
-                    <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer" class="btn-wa">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.571-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                        </svg>
-                        WhatsApp Us
-                    </a>
-                </li>
-            </ul>
+<!-- Mandala background decoration -->
+<svg class="mandala-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <circle cx="200" cy="200" r="190" stroke="#C9922A" stroke-width="0.5"/>
+  <circle cx="200" cy="200" r="150" stroke="#C9922A" stroke-width="0.5"/>
+  <circle cx="200" cy="200" r="110" stroke="#8B1A1A" stroke-width="0.5"/>
+  <circle cx="200" cy="200" r="70"  stroke="#C9922A" stroke-width="0.5"/>
+  <circle cx="200" cy="200" r="30"  stroke="#8B1A1A" stroke-width="1"/>
+  <line x1="200" y1="10"  x2="200" y2="390" stroke="#C9922A" stroke-width="0.3"/>
+  <line x1="10"  y1="200" x2="390" y2="200" stroke="#C9922A" stroke-width="0.3"/>
+  <line x1="66"  y1="66"  x2="334" y2="334" stroke="#C9922A" stroke-width="0.3"/>
+  <line x1="334" y1="66"  x2="66"  y2="334" stroke="#C9922A" stroke-width="0.3"/>
+  <line x1="200" y1="10"  x2="66"  y2="334" stroke="#8B1A1A" stroke-width="0.2"/>
+  <line x1="200" y1="10"  x2="334" y2="334" stroke="#8B1A1A" stroke-width="0.2"/>
+  <polygon points="200,50 230,150 340,150 250,210 280,320 200,260 120,320 150,210 60,150 170,150" fill="none" stroke="#C9922A" stroke-width="0.4"/>
+</svg>
 
-            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </button>
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#home" class="brand-wrap">
+            <span class="brand-logo">Srijana Books & Stationery</span>
+            <span class="brand-tagline">श्रीजना बुक्स एण्ड स्टेशनरी</span>
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home"     class="nav-link">Home</a></li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+            <li><a href="#about"    class="nav-link">About</a></li>
+            <li><a href="#contact"  class="nav-link">Contact</a></li>
+            <li>
+                <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer" class="btn-wa">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.571-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    WhatsApp
+                </a>
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero" id="home">
+    <div class="container hero-content fade-in">
+        <div class="hero-badge">Chabahil, Kathmandu · Since Years</div>
+        <h1>सजिलो पाइन्छ, राम्रो पाइन्छ</h1>
+        <div class="hero-en-title">Everything you need, all in one place</div>
+        <p class="hero-description">Books &nbsp;·&nbsp; Stationery &nbsp;·&nbsp; Art Supplies &nbsp;·&nbsp; Printing</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Find Our Shop</a>
+            <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp Us</a>
         </div>
-    </nav>
+    </div>
+    <div class="scroll-hint">Scroll</div>
+</header>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <div class="container hero-content fade-in">
-            <h1>सजिलो पाइन्छ, राम्रो पाइन्छ</h1>
-            <div class="subtitle">Everything you need, all in one place</div>
-            <p class="description">Books • Stationery • Art Supplies • Printing — Chabahil, Kathmandu</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Find Our Shop</a>
-                <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp Us</a>
+<!-- ── HOURS BANNER ── -->
+<aside class="hours-banner fade-in">
+    <div class="container">
+        <span>आइत–शुक्र:</span> 8:00 AM – 8:00 PM &nbsp;&nbsp;|&nbsp;&nbsp; <span>शनिबार:</span> 11:00 AM – 8:00 PM
+    </div>
+</aside>
+
+<!-- ── PRODUCTS ── -->
+<section class="products" id="products">
+    <div class="container">
+        <h2 class="section-title fade-in">हाम्रा सामानहरू</h2>
+        <p class="section-subtitle fade-in">Our Products</p>
+        <div class="ornament fade-in"><div class="ornament-diamond"></div></div>
+        <div class="product-grid">
+            <div class="product-card fade-in"><span class="product-icon">📚</span><div class="product-title-np">पाठ्यपुस्तक तथा उपन्यास</div><div class="product-title-en">Textbooks & Novels</div></div>
+            <div class="product-card fade-in"><span class="product-icon">✏️</span><div class="product-title-np">कलम तथा पेन्सिल</div><div class="product-title-en">Pens & Pencils</div></div>
+            <div class="product-card fade-in"><span class="product-icon">📓</span><div class="product-title-np">कापी तथा डायरी</div><div class="product-title-en">Notebooks & Diaries</div></div>
+            <div class="product-card fade-in"><span class="product-icon">🎨</span><div class="product-title-np">कला सामग्री</div><div class="product-title-en">Art & Drawing Supplies</div></div>
+            <div class="product-card fade-in"><span class="product-icon">🖇️</span><div class="product-title-np">अफिस सामग्री</div><div class="product-title-en">Office Stationery</div></div>
+            <div class="product-card fade-in"><span class="product-icon">🖨️</span><div class="product-title-np">प्रिन्टिङ तथा फोटोकपी</div><div class="product-title-en">Printing & Photocopy</div></div>
+            <div class="product-card fade-in"><span class="product-icon">🇯🇵</span><div class="product-title-np">जापानी भाषा पुस्तक</div><div class="product-title-en">Japanese N4 / N5 Books</div></div>
+            <div class="product-card fade-in"><span class="product-icon">🏛️</span><div class="product-title-np">लोकसेवा तयारी</div><div class="product-title-en">Loksewa Prep Books</div></div>
+            <div class="product-card fade-in"><span class="product-icon">🎁</span><div class="product-title-np">उपहार र कार्ड</div><div class="product-title-en">Gift Wrapping & Cards</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ── HIGHLIGHT BANNER ── -->
+<section class="highlight-banner fade-in">
+    <div class="container">
+        <h2>Loksewa & Japanese Language Books — In Stock Now!</h2>
+        <p>Preparing for Loksewa? Learning Japanese? We carry full N4 & N5 book sets and complete Loksewa preparation materials — ready for you today.</p>
+    </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title fade-in">हाम्रो बारेमा</h2>
+        <p class="section-subtitle fade-in">About Us</p>
+        <div class="ornament fade-in"><div class="ornament-diamond"></div></div>
+        <div class="about-content fade-in">
+            <div class="about-image">
+                <div class="placeholder-img">Photo of Proprietor</div>
+            </div>
+            <div class="about-text">
+                <p>Srijana Books and Stationery has been serving students, professionals, and families in Chabahil for years. Located beside the historic Charumati Stupa, we are your trusted source for books of every category — from school textbooks and Loksewa preparation to Japanese language books and creative art supplies.</p>
+                <p>We also offer printing, photocopy, A4 papers, e-papers, and gift wrapping services — everything you need under one roof.</p>
+                <p>हामी विद्यार्थी, कार्यालय र परिवार सबैका लागि पुस्तक तथा स्टेशनरी सामग्री उपलब्ध गराउँछौं।</p>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- Opening Hours Banner -->
-    <aside class="hours-banner fade-in">
-        <div class="container">
-            Sun–Fri: 8:00 AM – 8:00 PM &nbsp; | &nbsp; Saturday: 11:00 AM – 8:00 PM
+<!-- ── WHY CHOOSE US ── -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title fade-in">Why Choose Us</h2>
+        <p class="section-subtitle fade-in">हामीलाई किन छान्ने?</p>
+        <div class="ornament fade-in"><div class="ornament-diamond"></div></div>
+        <div class="features-grid">
+            <div class="feature-card fade-in"><span class="feature-icon">🛒</span><h4>Wide Selection</h4><p>Books from every category under one roof</p></div>
+            <div class="feature-card fade-in"><span class="feature-icon">💰</span><h4>Affordable Prices</h4><p>Student-friendly pricing always</p></div>
+            <div class="feature-card fade-in"><span class="feature-icon">📍</span><h4>Prime Location</h4><p>Beside Charumati Stupa, Chabahil</p></div>
+            <div class="feature-card fade-in"><span class="feature-icon">🤝</span><h4>Trusted by Locals</h4><p>Serving Kathmandu's families for years</p></div>
         </div>
-    </aside>
+    </div>
+</section>
 
-    <!-- Product Categories -->
-    <section class="products" id="products">
-        <div class="container">
-            <h2 class="fade-in">हाम्रा सामानहरू / Our Products</h2>
-            
-            <div class="product-grid">
-                <!-- Card 1 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">📚</div>
-                    <div class="product-title-np">पाठ्यपुस्तक</div>
-                    <div class="product-title-en">Textbooks & Novels</div>
-                </div>
-                <!-- Card 2 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">✏️</div>
-                    <div class="product-title-np">कलम तथा पेन्सिल</div>
-                    <div class="product-title-en">Pens & Pencils</div>
-                </div>
-                <!-- Card 3 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">📓</div>
-                    <div class="product-title-np">कापी तथा डायरी</div>
-                    <div class="product-title-en">Notebooks & Diaries</div>
-                </div>
-                <!-- Card 4 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">🎨</div>
-                    <div class="product-title-np">कला सामग्री</div>
-                    <div class="product-title-en">Art & Drawing Supplies</div>
-                </div>
-                <!-- Card 5 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">🖇️</div>
-                    <div class="product-title-np">अफिस सामग्री</div>
-                    <div class="product-title-en">Office Stationery</div>
-                </div>
-                <!-- Card 6 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">🖨️</div>
-                    <div class="product-title-np">प्रिन्टिङ</div>
-                    <div class="product-title-en">Printing & Photocopy</div>
-                </div>
-                <!-- Card 7 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">🇯🇵</div>
-                    <div class="product-title-np">जापानी भाषा</div>
-                    <div class="product-title-en">Japanese N4/N5 Books</div>
-                </div>
-                <!-- Card 8 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">🏛️</div>
-                    <div class="product-title-np">लोकसेवा</div>
-                    <div class="product-title-en">Loksewa Prep Books</div>
-                </div>
-                <!-- Card 9 -->
-                <div class="product-card fade-in">
-                    <div class="product-icon">🎁</div>
-                    <div class="product-title-np">उपहार</div>
-                    <div class="product-title-en">Gift Wrapping & Cards</div>
-                </div>
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title fade-in">हामीलाई भेट्नुहोस्</h2>
+        <p class="section-subtitle fade-in">Find Us</p>
+        <div class="ornament fade-in"><div class="ornament-diamond"></div></div>
+        <div class="contact-container">
+            <div class="contact-details fade-in">
+                <div class="contact-item"><span class="icon">📍</span><div>Beside Charumati Stupa, Chabahil, Kathmandu</div></div>
+                <div class="contact-item"><span class="icon">📞</span><div><a href="tel:9841072312">9841072312</a></div></div>
+                <div class="contact-item"><span class="icon">💬</span><div>WhatsApp: <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer">9841072312</a></div></div>
+                <div class="contact-item"><span class="icon">🕐</span><div>Sun–Fri: 8:00 AM – 8:00 PM<br>Saturday: 11:00 AM – 8:00 PM</div></div>
+                <a href="https://maps.google.com/?q=Charumati+Stupa+Chabahil+Kathmandu" target="_blank" rel="noopener noreferrer" class="btn btn-primary contact-btn">Get Directions ↗</a>
+            </div>
+            <div class="map-container fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.067344445853!2d85.3444!3d27.7161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1970b80894ab%3A0xc3f5a2e6f9d45ccb!2sCharumati%20Vihara%20(Chabahil%20Stupa)!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Srijana Books and Stationery Location"></iframe>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Special Highlight Banner -->
-    <section class="highlight-banner fade-in">
-        <div class="container">
-            <h2>Loksewa & Japanese Language Books — In Stock Now!</h2>
-            <p>Preparing for Loksewa? Learning Japanese? We've got N4, N5 books and full Loksewa sets ready for you.</p>
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="container">
+        <div class="footer-logo">Srijana Books & Stationery</div>
+        <div class="footer-nepali">श्रीजना बुक्स एण्ड स्टेशनरी</div>
+        <div class="footer-tagline">Everything you need, all in one place.</div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="fade-in">हाम्रो बारेमा / About Us</h2>
-            <div class="about-content fade-in">
-                <div class="about-image">
-                    <div class="placeholder-img">Photo of Proprietor</div>
-                </div>
-                <div class="about-text">
-                    <p>Srijana Books and Stationery has been serving students, professionals, and families in Chabahil for years. Located beside the historic Charumati Stupa, we are your trusted source for books of every category — from school textbooks and Loksewa preparation to Japanese language books and creative art supplies. We also offer printing, photocopy, and gift wrapping services.</p>
-                    <p>हामी विद्यार्थी, कार्यालय र परिवार सबैका लागि पुस्तक तथा स्टेशनरी सामग्री उपलब्ध गराउँछौं।</p>
-                </div>
-            </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>Made with ❤️ in Chabahil, Kathmandu</p>
+            <p>&copy; 2025 Srijana Books and Stationery. All rights reserved.</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Why Choose Us -->
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🛒</div>
-                    <h4>Wide Selection</h4>
-                    <p>Books from every category under one roof</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">💰</div>
-                    <h4>Affordable Prices</h4>
-                    <p>Student-friendly pricing always</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📍</div>
-                    <h4>Convenient Location</h4>
-                    <p>Beside Charumati Stupa, Chabahil</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🤝</div>
-                    <h4>Trusted by Locals</h4>
-                    <p>Serving Kathmandu's students & families</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.571-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="fade-in">हामीलाई भेट्नुहोस् / Find Us</h2>
-            <div class="contact-container">
-                <!-- Details Card -->
-                <div class="contact-details fade-in">
-                    <div class="contact-item">
-                        <span class="icon">📍</span>
-                        <div>Beside Charumati Stupa, Chabahil, Kathmandu</div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="icon">📞</span>
-                        <div>9841072312</div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="icon">💬</span>
-                        <div>
-                            WhatsApp: <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer" style="color: var(--forest-green); font-weight: 600; text-decoration: underline;">9841072312</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="icon">🕐</span>
-                        <div>Sun–Fri: 8AM–8PM <br> Sat: 11AM–8PM</div>
-                    </div>
-                    
-                    <a href="https://maps.google.com/?q=Charumati+Stupa+Chabahil+Kathmandu" target="_blank" rel="noopener noreferrer" class="btn btn-primary contact-btn">Get Directions</a>
-                </div>
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-                <!-- Map iframe -->
-                <div class="map-container fade-in">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.067344445853!2d85.3444!3d27.7161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1970b80894ab%3A0xc3f5a2e6f9d45ccb!2sCharumati%20Vihara%20(Chabahil%20Stupa)!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map - Srijana Books and Stationery"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-logo brand-logo">Srijana Books & Stationery</div>
-            <div class="footer-tagline">Everything you need, all in one place.</div>
-            
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>Made with ❤️ in Chabahil, Kathmandu</p>
-                <p>&copy; 2025 Srijana Books and Stationery. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+    });
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/9779841072312" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Chat with us on WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.571-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-        </svg>
-    </a>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+    document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('active')));
 
-    <!-- JavaScript scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // Sticky Navbar Logic
-            const navbar = document.getElementById('navbar');
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-
-            // Hamburger Menu Logic
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            hamburger.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-
-            // Close mobile menu when link is clicked
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                });
-            });
-
-            // Intersection Observer for Scroll Fade-in Animations
-            const fadeElements = document.querySelectorAll('.fade-in');
-
-            const appearOptions = {
-                threshold: 0.15,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                });
-            }, appearOptions);
-
-            fadeElements.forEach(el => {
-                appearOnScroll.observe(el);
-            });
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
         });
-    </script>
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+    // Back to top
+    document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+});
+</script>
 </body>
 </html>
